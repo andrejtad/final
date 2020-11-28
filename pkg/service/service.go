@@ -11,6 +11,18 @@ type Authorisation interface {
 	ParseToken(token string) (int, error)
 }
 
+type Tag interface {
+	Create(tag final.Tag) (int, error)
+	GetAll() ([]final.Tag, error)
+	GetById(tagId int) (final.Tag, error)
+	Delete(tagId int) error
+	Update(tagId int, input final.UpdateTagInput) error
+}
+
+type LinkType  interface {
+	GetAll() ([]final.LinkType, error)
+}
+
 type DataOwner interface {
 	Create(dataOwner final.DataOwner) (int, error)
 	GetAll() ([]final.DataOwner, error)
@@ -37,6 +49,8 @@ type Specification  interface {
 
 type Service struct {
 	Authorisation
+	Tag
+	LinkType
 	DataOwner
 	Dataset
 	Specification
@@ -45,6 +59,8 @@ type Service struct {
 func NewService(repos *repository.Repository) *Service  {
 	return &Service{
 		Authorisation: NewAuthService(repos.Authorisation),
+		Tag: NewTagService(repos.Tag),
+		LinkType: NewLinkTypeService(repos.LinkType),
 		DataOwner: NewDataOwnerService(repos.DataOwner),
 		Dataset: NewDatasetService(repos.Dataset, repos.DataOwner),
 		Specification: NewSpecificationService(repos.Specification, repos.Dataset),

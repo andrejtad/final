@@ -59,15 +59,15 @@ func (h *Handler) InitRoutes() *gin.Engine  {
 		}
 		tags := api.Group("/tags")
 		{
-			tags.POST("/") //, h.createTag
-			tags.GET("/") //, h.getAllTags
-			tags.PUT("/:id") //, h.updateTag
-			tags.GET("/:id")// , h.getTagById
-			tags.DELETE("/:id") //, h.DeleteTag
+			tags.POST("/", h.createTag)
+			tags.GET("/", h.getAllTags)
+			tags.PUT("/:id", h.updateTag)
+			tags.GET("/:id", h.getTagById)
+			tags.DELETE("/:id", h.DeleteTag)
 		}
 		linkType := api.Group("/linktype")
 		{
-			linkType.GET("/") //, h.getAllLinkTypes
+			linkType.GET("/", h.getAllLinkTypes)
 		}
 	}
 	return router

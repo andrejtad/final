@@ -7,10 +7,6 @@ import (
 
 const (
 	usersTable                      = "users"
-	todoListTable                   = "todo_lists"
-	usersListTable                  = "users_lists"
-	todoItemsTable                  = "todo_items"
-	listItemsTable                  = "lists_items"
 	dataOwnerTable                  = "data_owner"
 	datasetTable                    = "dataset"
 	specificationTable              = "specification"
