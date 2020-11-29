@@ -1,0 +1,20 @@
+.footer {
+    color: #ffffff;
+    background-color: #0a2896;
+
+    &_pos {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    &__logo {
+       // margin-right: auto;
+    }
+
+    &__item {
+        font-size: 24px;
+    }
+}

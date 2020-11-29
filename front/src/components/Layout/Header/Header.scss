@@ -1,0 +1,39 @@
+.header {
+    background: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    color: #323232;
+
+    &_pos {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        color: #333333;
+    }
+
+    &__left {
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 24px;
+        margin-left: 25px;
+    }
+
+    &__right {
+        margin-left: auto;
+        
+        &__logout {
+            background: url("../../../assets/img/logout.png");
+            width: 17px;
+            height: 14px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

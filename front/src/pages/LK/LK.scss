@@ -1,0 +1,32 @@
+.lk {
+    background-color: #fff;
+
+    &__workbench {
+        padding: 20px 40px;
+        width: 60%;
+
+        &__navbar {
+            display: flex;
+            justify-content: left;
+            margin-bottom: 30px;
+
+            &__nav {
+                background: #FAFAFA;
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14),
+                0 2px 1px rgba(0, 0, 0, 0.12),
+                0 1px 3px rgba(0, 0, 0, 0.2);
+                border-radius: 4px;
+                color: #292B2F;
+                padding: 5px 20px;
+                margin-right: 15px;
+
+                &:hover {
+                    color: #222222;
+                    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.14),
+                    1px 3px 1px rgba(0, 0, 0, 0.12),
+                    1px 2px 3px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+export const listsTypes = {
+    ADD_LIST: 'ADD_LIST',
+    SET_LIST: 'SET_LIST',
+    REMOVE_LIST: 'REMOVE_LIST',
+    ADD_ITEM: 'ADD_ITEM',
+    SET_ITEM: 'SET_ITEM',
+    REMOVE_ITEM: 'REMOVE_ITEM',
+    SET_SPEC: 'SET_SPEC',
+
+    SET_LINK_TYPE: 'SET_LINK_TYPE',
+    SET_LINK: 'SET_LINK'
+}

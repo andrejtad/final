@@ -1,13 +1,8 @@
-# final
+# Final
 
-You need go (golang) version 1.14
+You need docker and docker-compose
 
-1. chmod +x migrate
-2. chmod +x migrate.sh
-3. docker-compose up -d --build (it's run database)
-4. ./migrate.sh
-5. go mod download
-6. go build -o app ./cmd/main.go
-7. ./app
+1. docker-compose build
+2. docker-compose up -d
 
-server (API) available at localhost:8000
+server available at 127.0.0.1 (NOT localhost)

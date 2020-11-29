@@ -1,0 +1,44 @@
+.search {
+    background-color: #004ccf;
+    padding: 30px 70px;
+    position: relative;
+
+
+    &__bottom {
+        display: flex;
+        align-items: flex-start;
+        padding-top: 15px;
+
+        &__icons {
+            position: absolute;
+            left: 50%;
+            bottom: 25px;
+            transform: translateX(-50%);
+        }
+
+        &__tags {
+
+        }
+
+        &__button {
+            margin-left: auto;
+            background-color: #1665d8;
+            border: none;
+            padding: 8px 40px;
+
+            &:hover {
+                background-color: #0D5DD0;
+            }
+        }
+    }
+
+    &_main {
+        display: flex;
+        padding-bottom: 80px;
+
+        .search__bottom {
+            padding-top: 0 ;
+            margin-left: 10px;
+        }
+    }
+}

@@ -1,13 +1,44 @@
-version: '3.1'
-
+version: "3.7"
 services:
-
-  db:
+  backend:
+    build: ./final
+    command: ./wait-for-postgres.sh postgres ./migrate-db.sh postgres ./app
+    ports:
+    - 8000:8000
+    depends_on:
+    - postgres
+    links:
+    - postgres
+    environment:
+    - DB_PASSWORD=qwerty
+#    - GIN_MODE=release
+  front:
+    build: ./front
+    command: npm start
+    ports:
+    - 3000:3000
+    depends_on:
+    - backend
+  nginx:
+    build: ./nginx
+    command: nginx -g "daemon off;"
+    depends_on:
+    - backend
+    - front
+    links:
+    - backend
+    - front
+    ports:
+    - 80:80
+    volumes:
+    - ./logs:/etc/logs/nginx
+    - ./code:/var/www:rw
+  postgres:
     image: postgres:11
     ports:
     - 5432:5432
     volumes:
-    - ./database/postgres:/data/postgres
+    - ./.database/postgres:/data/postgres
     environment:
       POSTGRES_PASSWORD: qwerty
       POSTGRES_USER: postgres

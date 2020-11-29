@@ -1,0 +1,41 @@
+$rotate-time: 300ms;
+$custom-grey: #4F4F4F;
+
+.ReactCollapse--collapse {
+    transition: height $rotate-time;
+    border-bottom: 1px solid lightgrey;
+}
+
+.ReactCollapse--content {
+    padding: 0 20px 30px;
+}
+
+.accordion {
+    a {
+        color: $custom-grey;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__category {
+        display: flex;
+        justify-content: space-between;
+        line-height: 36px;
+        padding: 10px 20px;
+        cursor: pointer;
+
+        &__title {
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        &__desc {
+            font-size: 16px;
+        }
+    }
+
+    & hr {
+        margin-top: 5px;
+    }
+}

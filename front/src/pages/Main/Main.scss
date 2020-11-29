@@ -1,0 +1,19 @@
+.main {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url('../../assets/img/bg-1.png') center center no-repeat;
+        background-size: cover;
+        opacity: 0.9;
+        background-color: #1060D6;
+        z-index: -1;
+    }
+}

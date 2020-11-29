@@ -1,0 +1,21 @@
+.ministry {
+    margin-top: 40px;
+
+    &__list {
+        margin: 50px 0;
+        border: 1px solid #c6c8ca;
+        border-radius: .25rem;
+    }
+
+    &__form {
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+    input {
+        &::placeholder {
+            font-size: 14px;
+        }
+    }
+}
